@@ -16,5 +16,5 @@ d-o-t-f-i-l-e-s
 - wm: i3
 - date: jan 2020
 
-![img](/i3/image.png)
+![img](/i3/image.PNG)
 
