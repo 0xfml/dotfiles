@@ -1,0 +1,44 @@
+general {
+	output_format = "i3bar"
+	colors = true
+	color_good = '#82B414'
+	color_degraded = '#fd971f'
+	color_bad = '#f92672'
+	interval = 1
+}
+
+
+order += "load"
+order += "ethernet ens33"
+order += "disk /"
+order += "path_exists VPN"
+order += "ethernet tun0"
+order += "tztime local"
+
+
+load {
+	format = "%5min Load"
+}
+
+ethernet ens33 {
+	format_up = "E: %ip (%speed)"
+	format_down = "E: down"
+}
+
+disk "/" {
+	format = "%free Free"
+}
+
+path_exists VPN {
+	path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
+ethernet tun0 {
+	format_up = "V: %ip (%speed)"
+	format_down = "V: down"
+}
+
+tztime local {
+	format = "%time"
+	format_time = "%a %-d %b %H:%M:%S"
+}
