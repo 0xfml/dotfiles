@@ -1,0 +1,18 @@
+set linenumbers
+set autoindent
+set titlecolor black,green
+set smooth
+set numbercolor green,black
+set nohelp
+
+bind ^f whereis main
+bind ^v uncut main
+bind ^c copytext main
+bind ^b lastline main
+bind ^t firstline main
+bind ^y cut main
+bind ^Space mark main
+bind ^u undo main
+
+
+include /usr/share/nano/*
